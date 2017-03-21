@@ -55,6 +55,18 @@ ip_o_host:9200/skynet_beeva/nombre_banco/aaaa-mm-dd?pretty=true
 * El auto_todo.sh es para correr el script test_embed.py de manera continua con crontab, se puede configurar la ruta del script y el intervalo de tiempo
 
 
+#Instrucciones FRONT-END
+
+En la carpeta /var/www/html/ se colocará la carpeta del proyecto con el nombre “Proyecto_1”.Esta carpeta contiene varias carpetas:
+
+    *En al carpeta “data” contiene los json de elasticsearch el cual manda los datos historios y además se recuperan los json de python de los datos mas relevantes obtenidos del día y además contiene el JavaScript de las graficas en donde se obtiene los datos de los json para el manejo de las graficas.
+
+    *En “pages” contiene los html utilizados, la parte visual.
+
+    *En las carpetas “dist” y “vendor” contiene los css y el framework boostrap para facilitar el manejo de la parte visual.
+
+
+
 *Nota: Si es necesario declarar en el crontab es importnate revisar y cambiar las rutas de los archivos que ahi se señalan por
   las rutas absolutas:
   *Carpea python-scripts-analisis
