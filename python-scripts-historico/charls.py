@@ -11,10 +11,11 @@ from elasticsearch import Elasticsearch
                                     
 es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
 
-consumer_key = 'QvyttUNFpYvpf05FiSrsFOjZz'                            
-consumer_secret = '0yvZMOrq0qKwz1dcKhzKB04RinFdxZYqYOghQr1mNtg612AX6g'                                          
-access_token = '227835837-WD07ixlyOeLqkeywbnMYzk5dnebJjd1pA4sKpOjl'
-access_secret = '6utbaX2ab3UrpL4PpfSx6ToCuuQZgZ5zDDqKQq2albTLL'  
+#Variables para poner las llaves y tokens para acceso a la API
+consumer_key = ''                            
+consumer_secret = ''                                          
+access_token = ''
+access_secret = ''  
                                                                                                                  
 auth = OAuthHandler(consumer_key, consumer_secret)                                                              
 auth.set_access_token(access_token, access_secret)                                                              
@@ -42,6 +43,6 @@ es.index(index='skynet_beeva', doc_type=args[1], id=args[2], body= datos_tweets)
 es.get(index='skynet_beeva', doc_type=args[1], id=args[2])
 
 ela_bancomer = es.get(index='skynet_beeva', doc_type=args[1], id=args[2])
-
-with open('/home/administradorcito/Documentos/data-storage/proyecto1/datoJ/'+args[1]+args[2]+'.json', 'w') as fp:                                                                     
+#Añadir la ruta absoluta a datoJ para ejecutar con el cron
+with open('datoJ/'+args[1]+args[2]+'.json', 'w') as fp:                                                                     
          json.dump(ela_bancomer, fp)
