@@ -55,7 +55,7 @@ else:
 	#DataFrame to display the data afterwards
 	df_datos_tweets=pd.DataFrame(datos_tweets)
 
-	#Saving the data and assigning a name realted to the given arguments
+	#Saving the data and assigning a name realted to the given arguments in case of running in crontab add absolut path
 	with open(name, 'w') as fp:
 	    json.dump(datos_tweets, fp)
 
