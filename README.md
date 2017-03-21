@@ -52,6 +52,8 @@ ip_o_host:9200/skynet_beeva/nombre_banco/aaaa-mm-dd?pretty=true
 
 * El script embed_test.py junta la parte de extracción(extract.py), análisis(load_classifier.py) y envio a la base de datos de Elasticsearch(subida_predi.py) tiene como argumentos el nombre del banco la fecha de inicio y fecha de término, como el script extract.py.
 
+* El auto_todo.sh es para correr el script test_embed.py de manera continua con crontab, se puede configurar la ruta del script y el intervalo de tiempo
+
 
 *Nota: Si es necesario declarar en el crontab es importnate revisar y cambiar las rutas de los archivos que ahi se señalan por
   las rutas absolutas:
@@ -62,4 +64,6 @@ ip_o_host:9200/skynet_beeva/nombre_banco/aaaa-mm-dd?pretty=true
   *Carpeta python-scripts-historico
     *auto_todo.sh
     *charls.py
+    
+Tambien es importante contemplar todos los archivos requirements.txt que estan en analisis e historico.
   
