@@ -1,0 +1,60 @@
+ <div class="modal fade" id="compose-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><i class="fa fa-inbox"></i> Imagen</h4>
+                    </div>
+                    
+                        <div class="modal-body">
+                            <div class="row">
+                                <form id="frm-categoria" name="frm-categoria">
+                                    <input type="hidden" name="gal_group" id="" value="<?=$_SESSION['gal']['group']?>" >
+                                    <div class="col-sm-5">
+                                        <div class="form-group">
+                                            <img src="../../sources/img/no_disponible.jpg" style="width:100%;" id="imgNewCatego" >
+                                        </div> 
+                                        
+                                        <div class="custom-input-file cat_lbl">
+                                                <input type="file" size="1" id="img_croquis" name="foto" class="input-file" onchange="loadImagen(this)" />
+                                                <button class="btn btn-default" id="btnLoad">
+                                                    <i class="fa fa-paperclip"></i> Seleccionar
+                                                </button>
+                                                <p class="help-block">Max. 1.5Mb</p>
+                                        </div>
+                                        <p id="file-controles"></p>                                        
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">Nombre:</span>
+                                                <input name="nombre" type="text" class="form-control" onkeypress="return exeSave(event)">
+                                            </div>
+                                        </div> 
+                                    </div>                           
+
+                                    <div class="col-sm-7">
+                                        <div class="form-group">
+                                            <textarea name="palabras" id="email_message" class="form-control" style="height: 120px;" placeholder="http://"></textarea>
+                                            <span style="font-size:10px; color:#aaa;">Escribe aqui la URL de la página a la que redireccionara..</span>
+                                        </div>
+                                        <div class="callout callout-info">
+                                            <input type="checkbox" id="inactivo" name="inactivo">
+                                            <label for="inactivo">&nbsp;&nbsp;Inactivo</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-sm-12" id="msgBox"></div>
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer clearfix">
+
+                            <span class="btn btn-primary" onclick="saveGaleria();"><i class="fa fa-floppy-o"></i> Guardar</span>
+
+                            <button type="button" class="btn btn-danger pull-left" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                        </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
