@@ -1,5 +1,6 @@
 import os
 import sys
+#in case of using crontab add absolute path
 arg=sys.argv
 banco=arg[1]
 fecha_inicio=arg[2]
