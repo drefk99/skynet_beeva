@@ -11,7 +11,7 @@ from elasticsearch import Elasticsearch
                                     
 es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
 
-#Variables para poner las llaves y tokens para acceso a la API
+#Variables para poner las credenciales para la API
 consumer_key = ''                            
 consumer_secret = ''                                          
 access_token = ''
