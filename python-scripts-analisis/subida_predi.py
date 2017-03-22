@@ -6,6 +6,7 @@ from elasticsearch import Elasticsearch
 es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
 
 args=sys.argv
+#in case of using crontab add absolute path
 
 with open(args[2]+'.json') as data_file:
 
