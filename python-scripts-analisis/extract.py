@@ -9,7 +9,7 @@ import pickle
 import sys
 import os
 
-#Get external arguments to search the tweets
+#Get external arguments to search the tweets in case of using crontab add absolute path
 arg=sys.argv
 print(sys.argv)
 name=arg[1]+'_'+arg[2]+'.json'
@@ -55,7 +55,7 @@ else:
 	#DataFrame to display the data afterwards
 	df_datos_tweets=pd.DataFrame(datos_tweets)
 
-	#Saving the data and assigning a name realted to the given arguments
+	#Saving the data and assigning a name realted to the given arguments in case of using crontab add absolute path
 	with open(name, 'w') as fp:
 	    json.dump(datos_tweets, fp)
 
