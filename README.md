@@ -57,15 +57,25 @@ ip_o_host:9200/skynet_beeva/nombre_banco/aaaa-mm-dd?pretty=true
 
 #Instrucciones FRONT-END
 
-En la carpeta /var/www/html/ se colocará la carpeta del proyecto con el nombre “Proyecto_1”.Esta carpeta contiene varias carpetas:
+En la carpeta /var/www/html/ se colocará el clon del repositorio “skynet_beeva”.Esta carpeta contiene varias carpetas:
 
-    *En al carpeta “data” contiene los json de elasticsearch el cual manda los datos historios y además se recuperan los json de python de los datos mas relevantes obtenidos del día y además contiene el JavaScript de las graficas en donde se obtiene los datos de los json para el manejo de las graficas.
+    *En al carpeta “data” contiene los json de elasticsearch el cual manda los datos historios y además se
+    recuperan los json de python de los datos mas relevantes obtenidos del día y además contiene el JavaScript de
+    las graficas en donde se obtiene los datos de los json para el manejo de las graficas.
 
     *En “pages” contiene los html utilizados, la parte visual.
 
-    *En las carpetas “dist” y “vendor” contiene los css y el framework boostrap para facilitar el manejo de la parte visual.
+    *En las carpetas “dist” y “vendor” contiene los css y el framework boostrap para facilitar el manejo de la
+    parte visual.
 
 
+
+
+
+# Ingreso
+
+Para ingresar al sistema desde el navegador se necesita ingresar a la dirección 
+http://ip_o_host/skynet_beeva/pages
 
 *Nota: Si es necesario declarar en el crontab es importnate revisar y cambiar las rutas de los archivos que ahi se señalan por
   las rutas absolutas:
