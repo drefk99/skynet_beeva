@@ -8,12 +8,12 @@ import json
 import sys
 import os
 
-#Getting the external arguments and builiding strings for later use
+#Getting the external arguments and builiding strings for later use in case of using crontab add absolute path
 arg=sys.argv
 name1=arg[1]+'_analisis.json'
 name2=arg[1]+'_resultados.json'
 
-#Loading the classifier and the word features
+#Loading the classifier and the word features in case of using crontab add absolute path
 with open('objs.pickle', "rb") as f:
         classifier, word_features=pickle.load(f)
 
@@ -93,11 +93,11 @@ else:
 
 	print(values)
 
-	#Save the file of the tweets with their evaluation
+	#Save the file of the tweets with their evaluation in case of using crontab add absolute path
 	with open(name1, 'w') as fp1:
 	    json.dump(values, fp1)
 
-	#Save the file with the final results
+	#Save the file with the final results in case of using crontab add absolute path
 	with open(name2, 'w') as fp2:
 	    json.dump(sentiments, fp2)
 
