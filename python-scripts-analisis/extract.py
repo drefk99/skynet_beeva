@@ -23,11 +23,12 @@ else:
 if os.path.isfile(name):
 	print('Data has been already downloaded')
 else:
+#Add personal credentials in order for this script to work
 	print('GET ALL THE TWEETS!!!')
-	consumer_key = 'w87sF4cjjFylzzyCd4mmTVfW3'
-	consumer_secret = 'QSomS57CVwOZWHoK9Bl2yt2PdBImgxftulZeGSraq4n9vJzGFh'
-	access_token = '293210492-tjb5kNx8Iupi4Yq4vTlk3vuXCTM3XWqxALnoyIak'
-	access_secret = 'g6IjmWVWljTp9OjrFBZddiIyzjFC9251S7brov3RHT3hU'
+	consumer_key = ''
+	consumer_secret = ''
+	access_token = ''
+	access_secret = ''
 
 	auth = OAuthHandler(consumer_key, consumer_secret)
 	auth.set_access_token(access_token, access_secret)
