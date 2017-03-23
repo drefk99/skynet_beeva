@@ -4,7 +4,7 @@
 
 #Añadir la ruta absoluta a env para ejecutar con el cron
 
-source env/bin/activate
+source ../env/bin/activate
 yest_man=`expr $(date +%d) + 1`
 
 #Añadir la ruta absoluta a charls.py para ejecutar con el cron
