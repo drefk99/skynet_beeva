@@ -1,9 +1,9 @@
 #!/bin/bash
 # -*- ENCODING: UTF-8 -*-
 
+#If vietualenv is in another loction change the source
 
-
-source /home/graduate/Bank_sentiment_analysis/env/bin/activate
+source ../env/bin/activate
 yest_man=`expr $(date +%d) - 1`
 
 python test_embed.py bancomer $(date +%Y-%m-$yest_man) $(date +%Y-%m-%d)
