@@ -2,7 +2,7 @@ decorator==4.0.11
 elasticsearch==5.2.0
 html5lib==0.999999999
 jsonschema==2.6.0
-nltk==3.2.2
+nltk==3.4.5
 numpy==1.12.0
 pandas==0.19.2
 pickleshare==0.7.4
